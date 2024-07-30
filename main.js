@@ -1,15 +1,16 @@
-const form = document.forms.namedItem('registration')
-form.onsubmit = async (e) => {
-  e.preventDefault();
+import { header } from "./components/Header";
+import { reload } from "./lib/utils";
+import { transaction } from "./components/Tranjactions";
+import { card } from "./components/Cards";
+const data = [
+    {
+        id: 1,
+    },
+];
+const body = document.body
+const tbody = document.querySelector('.place')
+const card_place = document.querySelector('.my_cards')
 
-  const formData = new FormData(form);
-
-  const student = {
-    emial: formData.get('registration_email'),
-    name: formData.get('registration_name'),
-    surname: formData.get('registration_surname'),
-    password: formData.get('registration_password'),
-  }
-
-  console.log(student);
-}
+reload(data,body, header)
+reload(data,tbody, transaction)
+reload(data,card_place, card)

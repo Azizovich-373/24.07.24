@@ -4,22 +4,36 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="/scss/style.scss">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
 </head>
 
 <body>
+    
     <div class="container">
-        <h1 class="title">Регистрация</h1>
-        <form name="registration">
-            <input type="email" name="registration_email" id="registration_email" placeholder="email" class="reg_inp">
-            <input type="text" name="registration_name" id="registration_name" placeholder="name" class="reg_inp">
-            <input type="text" name="registration_surname" id="registration_surname" placeholder="surname" class="reg_inp">
-            <input type="password" name="registration_password" id="registration_password" placeholder="password" class="reg_inp">
-            <button class="save">Продолжить</button>
-        </form>
-        <h2 class="come_in">Войти в аккаунт</h2>
+        <h2 class="welcome">Добро пожаловать, Alex Adams!</h2>
+        <p class="email_main">alexadams@google.com</p>
+        <section class="my_cards">
+            <p class="card_title">Мои карты</p>
+        </section>
+        <a href="#" class="link_main">Смотреть все кошелки</a>
+        <secrion class="transaction">
+            <h3 class="transaction_title">Последние транзакции</h3>
+            <table class="transaction_data">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Отправлено с кошелька</th>
+                        <th>Категория</th>
+                        <th>Сумма транзации</th>
+                        <th>Когда</th>
+                    </tr>
+                </thead>
+                <tbody class="place"></tbody>
+            </table>
+        </secrion>
+        <a href="#" class="link_main">Смотреть все оплаты</a>
     </div>
     <script type="module" src="/main.js"></script>
 </body>
